@@ -1,0 +1,3 @@
+17-Oct-2025 11:28:02 | INFO    | Your Klayout version is: KLayout 0.30.4
+17-Oct-2025 11:28:02 | INFO    | Running SG13G2 LVS checks on design /home/verhaegs/eda/Chipflow/IHP/FlowSpace/05_SRAM_generator/sramblock_testchip/TO_Sep2025/FlowSpace_SRAMBlocksTest/design_data/gds/SRAMBlocksTest_filled_M2fix.gds on cell DP01
+17-Oct-2025 11:28:42 | INFO    | Total execution time 40.73927545547485s
