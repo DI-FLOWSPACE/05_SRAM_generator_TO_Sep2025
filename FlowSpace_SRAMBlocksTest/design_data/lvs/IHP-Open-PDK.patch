@@ -1,0 +1,94 @@
+diff --git a/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_connections.lvs b/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_connections.lvs
+index cf3ea98..19131bf 100644
+--- a/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_connections.lvs
++++ b/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_connections.lvs
+@@ -53,6 +53,7 @@ connect(psd_fet, psd_ntap_abutt)
+ connect(psd_ntap_abutt, ntap)
+ 
+ # Attaching labels
++connect(nwell_drw, nwell_text)
+ connect(metal1_con, metal1_text)
+ connect(metal2_con, metal2_text)
+ connect(metal3_con, metal3_text)
+diff --git a/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_derivations.lvs b/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_derivations.lvs
+index f04d644..b80215a 100644
+--- a/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_derivations.lvs
++++ b/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/general_derivations.lvs
+@@ -71,9 +71,11 @@ ngate_hv_base = ngate.and(thickgateox_drw)
+ pgate_hv_base = pgate.and(thickgateox_drw)
+ 
+ # S/D FETs
+-nsd_fet = nactiv.not(nwell_drw).interacting(ngate).not(ngate).not_interacting(res_mk)
+-psd_fet = pactiv.and(nwell_drw).interacting(pgate).not(pgate).not_interacting(res_mk)
++nsd_fet_propagated = nactiv.not(nwell_drw).interacting(ngate).not(ngate).not_interacting(res_mk)
++nsd_fet = nactiv.and(nsd_fet_propagated)
+ 
++psd_fet_propagated = pactiv.and(nwell_drw).interacting(pgate).not(pgate).not_interacting(res_mk)
++psd_fet = pactiv.and(psd_fet_propagated)
+ 
+ # tap1 labels
+ well_patt = glob_to_case_insensitive_glob("well")
+diff --git a/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/layers_definitions.lvs b/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/layers_definitions.lvs
+index 0d7cb46..74d9904 100644
+--- a/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/layers_definitions.lvs
++++ b/ihp-sg13g2/libs.tech/klayout/tech/lvs/rule_decks/layers_definitions.lvs
+@@ -512,6 +512,11 @@ count = nwell_pin.count()
+ logger.info("nwell_pin has #{count} polygons")
+ polygons_count += count
+ 
++nwell_text = labels(31, 25)
++count = nwell_text.count()
++logger.info("nwell_text has #{count} polygons")
++polygons_count += count
++
+ nbulay_drw = get_polygons(32, 0)
+ count = nbulay_drw.count()
+ logger.info("nbulay_drw has #{count} polygons")
+diff --git a/ihp-sg13g2/libs.tech/klayout/tech/lvs/sg13g2.lvs b/ihp-sg13g2/libs.tech/klayout/tech/lvs/sg13g2.lvs
+index e33911b..129ea57 100644
+--- a/ihp-sg13g2/libs.tech/klayout/tech/lvs/sg13g2.lvs
++++ b/ihp-sg13g2/libs.tech/klayout/tech/lvs/sg13g2.lvs
+@@ -224,6 +224,30 @@ end
+ 
+ # %include rule_decks/layers_definitions.lvs
+ 
++#================================================
++#------ FlowSpace SRAM custom connection --------
++#================================================
++
++# logger.info('FlowSpace custom setup')
++
++# vdd may be different unconnected nets in the sub-cells
++# see also https://github.com/IHP-GmbH/IHP-Open-PDK/issues/364
++# We assume all SRAM sub-cells start with SP6T or DP8T
++connect_implicit('SP6T*', 'vss')
++connect_implicit('DP8T*', 'vss')
++connect_implicit('SP6T*', 'vdd')
++connect_implicit('DP8T*', 'vdd')
++connect_implicit('SP6T*Array*', 'nwell')
++connect_implicit('DP8T*Array*', 'nwell')
++
++# Some hacking is needed to handle shared source/drain regions
++# between different cells
++sharedsd_cells = [
++  "SP6TCell", "SP6TPrecharge", "SP6TRowDecoderNand3X2", "SP6TWLDrive_26LN100WN26LP200WP",
++  "DP8TCell", "DP8TPrecharge_bl1", "DP8TPrecharge_bl2", "DP8TRowDecoderNand3X2",
++  "DP8TWLDrive_26LN100WN26LP200WP_wl1", "DP8TWLDrive_26LN100WN26LP200WP_wl2"
++]
++
+ #================================================================
+ #------------------------- MAIN RUNSET --------------------------
+ #================================================================
+@@ -312,8 +336,12 @@ logger.info('Starting SG13G2 LVS DEVICES EXTRACTION')
+ # ----- MOSFET EXTRACTION -------
+ #================================
+ 
++cheat(sharedsd_cells) {
++
+ # %include rule_decks/mos_extraction.lvs
+ 
++}
++
+ #================================
+ # ---- RF-MOSFET EXTRACTION -----
+ #================================

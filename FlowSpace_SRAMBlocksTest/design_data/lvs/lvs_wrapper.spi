@@ -1,0 +1,16 @@
+* LVS wrapper
+
+* Device subcircuits
+*
+.subckt sg13_lv_nmos s g d b params: l=0.13e-6 w=0.15e-6
+Mtrans s g d b sg13_lv_nmos l=l w=w
+.ends sg13_lv_nmos
+
+.subckt sg13_lv_pmos s g d b params: l=0.13e-6 w=0.15e-6
+Mtrans s g d b sg13_lv_pmos l=l w=w
+.ends sg13_lv_pmos
+
+* Library cells
+*
+.include "../spice/SRAMBlocksTest_nopadring.spi"
+
