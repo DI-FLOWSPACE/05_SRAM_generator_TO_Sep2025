@@ -1,0 +1,32 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: Top block test simulation
+
+binary raw file "tb_SP02.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using KLU as Direct Linear Solver
+No. of Data Columns : 76  
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  5.47967e-10 Reference value :  6.11633e-10 Reference value :  7.25705e-10 Reference value :  8.44768e-10 Reference value :  1.04766e-09 Reference value :  1.45344e-09 Reference value :  2.21655e-09 Reference value :  3.46655e-09 Reference value :  4.71655e-09 Reference value :  5.00000e-09 Reference value :  5.02000e-09 Reference value :  5.06000e-09 Reference value :  5.11172e-09 Reference value :  5.18368e-09 Reference value :  5.20000e-09 Reference value :  5.20713e-09 Reference value :  5.22140e-09 Reference value :  5.24993e-09 Reference value :  5.27285e-09 Reference value :  5.29734e-09 Reference value :  5.32030e-09 Reference value :  5.34652e-09 Reference value :  5.37168e-09 Reference value :  5.39905e-09 Reference value :  5.43493e-09 Reference value :  5.47579e-09 Reference value :  5.51446e-09 Reference value :  5.55105e-09 Reference value :  5.59498e-09 Reference value :  5.63124e-09 Reference value :  5.66888e-09 Reference value :  5.70011e-09 Reference value :  5.73816e-09 Reference value :  5.78607e-09 Reference value :  5.85371e-09 Reference value :  5.93940e-09 Reference value :  6.00756e-09 Reference value :  6.07196e-09 Reference value :  6.13749e-09 Reference value :  6.20381e-09 Reference value :  6.27933e-09 Reference value :  6.36774e-09 Reference value :  6.44318e-09 Reference value :  6.54885e-09 Reference value :  6.67088e-09 Reference value :  6.91493e-09 Reference value :  7.24377e-09 Reference value :  7.50000e-09 Reference value :  7.52000e-09 Reference value :  7.56000e-09 Reference value :  7.64000e-09 Reference value :  7.70000e-09 Reference value :  7.70723e-09 Reference value :  7.72169e-09 Reference value :  7.74313e-09 Reference value :  7.76603e-09 Reference value :  7.78945e-09 Reference value :  7.81454e-09 Reference value :  7.84435e-09 Reference value :  7.87503e-09 Reference value :  7.90944e-09 Reference value :  7.94638e-09 Reference value :  7.98151e-09 Reference value :  8.01957e-09 Reference value :  8.05110e-09 Reference value :  8.08507e-09 Reference value :  8.11830e-09 Reference value :  8.15938e-09 Reference value :  8.20839e-09 Reference value :  8.27089e-09 Reference value :  8.33154e-09 Reference value :  8.45284e-09 Reference value :  8.56797e-09 Reference value :  8.69024e-09 Reference value :  8.75000e-09 Reference value :  8.76436e-09 Reference value :  8.79308e-09 Reference value :  8.85052e-09 Reference value :  8.91040e-09 Reference value :  8.95000e-09 Reference value :  8.95572e-09 Reference value :  8.96716e-09 Reference value :  8.99003e-09 Reference value :  9.01655e-09 Reference value :  9.04523e-09 Reference value :  9.08664e-09 Reference value :  9.13017e-09 Reference value :  9.21353e-09 Reference value :  9.38023e-09 Reference value :  9.71365e-09 Reference value :  1.00000e-08 Reference value :  1.00200e-08 Reference value :  1.00600e-08 Reference value :  1.01117e-08 Reference value :  1.01837e-08 Reference value :  1.02000e-08 Reference value :  1.02071e-08 Reference value :  1.02214e-08 Reference value :  1.02499e-08 Reference value :  1.02728e-08 Reference value :  1.02973e-08 Reference value :  1.03203e-08 Reference value :  1.03465e-08 Reference value :  1.03717e-08 Reference value :  1.03991e-08 Reference value :  1.04337e-08 Reference value :  1.04633e-08 Reference value :  1.04804e-08 Reference value :  1.05022e-08 Reference value :  1.05158e-08 Reference value :  1.05324e-08 Reference value :  1.05492e-08 Reference value :  1.05716e-08 Reference value :  1.05929e-08 Reference value :  1.06151e-08 Reference value :  1.06509e-08 Reference value :  1.06805e-08 Reference value :  1.07136e-08 Reference value :  1.07592e-08 Reference value :  1.08101e-08 Reference value :  1.08880e-08 Reference value :  1.09539e-08 Reference value :  1.10182e-08 Reference value :  1.10720e-08 Reference value :  1.11301e-08 Reference value :  1.12038e-08 Reference value :  1.12888e-08 Reference value :  1.13971e-08 Reference value :  1.15552e-08 Reference value :  1.17880e-08 Reference value :  1.20996e-08 Reference value :  1.24435e-08 Reference value :  1.25000e-08 Reference value :  1.25200e-08 Reference value :  1.25600e-08 Reference value :  1.26400e-08 Reference value :  1.27000e-08 Reference value :  1.27072e-08 Reference value :  1.27217e-08 Reference value :  1.27431e-08 Reference value :  1.27660e-08 Reference value :  1.27895e-08 Reference value :  1.28145e-08 Reference value :  1.28477e-08 Reference value :  1.28781e-08 Reference value :  1.29133e-08 Reference value :  1.29528e-08 Reference value :  1.29916e-08 Reference value :  1.30276e-08 Reference value :  1.30708e-08 Reference value :  1.31051e-08 Reference value :  1.31418e-08 Reference value :  1.31802e-08 Reference value :  1.32208e-08 Reference value :  1.32855e-08 Reference value :  1.33550e-08 Reference value :  1.34471e-08 Reference value :  1.35637e-08 Reference value :  1.36790e-08 Reference value :  1.38380e-08 Reference value :  1.40367e-08 Reference value :  1.42584e-08 Reference value :  1.46573e-08 Reference value :  1.50000e-08
+No. of Data Rows : 164
+
+Total analysis time (seconds) = 213.6
+
+Total elapsed time (seconds) = 241.049 
+
+Total DRAM available = 30966.465 MB.
+DRAM currently available =  432.305 MB.
+Maximum ngspice program size = 3666.641 MB.
+Current ngspice program size = 2986.633 MB.
+
+Shared ngspice pages =   12.109 MB.
+Text (code) pages =    5.863 MB.
+Stack = 0 bytes.
+Library pages = 3194.770 MB.
+
+429.54user 4.07system 4:01.25elapsed 179%CPU (0avgtext+0avgdata 3058772maxresident)k
+2440inputs+2696outputs (0major+945181minor)pagefaults 0swaps

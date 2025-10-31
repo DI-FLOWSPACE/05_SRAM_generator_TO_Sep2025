@@ -1,0 +1,432 @@
+.title Top block test simulation
+.lib /home/verhaegs/eda/Chipflow/code/c4m-arrakeen/PDKs/c4m-pdk-ihpsg13g2/deps/IHP-Open-PDK/ihp-sg13g2/libs.tech/ngspice/models/cornerMOSlv.lib mos_tt
+.include "../spice/SRAMBlocksTest_nopadring.spi"
+
+Xtop clk1 clk2 a1[0] a2[0] a1[1] a2[1] a1[2] a2[2] a1[3] a2[3] a1[4] a2[4] a1[5] a2[5] a1[6] a2[6] a1[7] a2[7] a1[8] a2[8] vss vdd q1[0] q1[1] q1[2] q1[3] q1[4] q1[5] q1[6] q1[7] q1[8] q1[9] q1[10] q1[11] q1[12] q1[13] q1[14] q1[15] q1[16] q1[17] q1[18] q1[19] q1[20] q1[21] q1[22] q1[23] q1[24] q1[25] q1[26] q1[27] q1[28] q1[29] q1[30] q1[31] q2[0] q2[1] q2[2] q2[3] q2[4] q2[5] q2[6] q2[7] q2[8] q2[9] q2[10] q2[11] q2[12] q2[13] q2[14] q2[15] q2[16] q2[17] q2[18] q2[19] q2[20] q2[21] q2[22] q2[23] q2[24] q2[25] q2[26] q2[27] q2[28] q2[29] q2[30] q2[31] d1[0] d1[1] d1[2] d1[3] d1[4] d1[5] d1[6] d1[7] d1[8] d1[9] d1[10] d1[11] d1[12] d1[13] d1[14] d1[15] d1[16] d1[17] d1[18] d1[19] d1[20] d1[21] d1[22] d1[23] d1[24] d1[25] d1[26] d1[27] d1[28] d1[29] d1[30] d1[31] d2[0] d2[1] d2[2] d2[3] d2[4] d2[5] d2[6] d2[7] d2[8] d2[9] d2[10] d2[11] d2[12] d2[13] d2[14] d2[15] d2[16] d2[17] d2[18] d2[19] d2[20] d2[21] d2[22] d2[23] d2[24] d2[25] d2[26] d2[27] d2[28] d2[29] d2[30] d2[31] we1[0] we1[1] we1[2] we1[3] we2[0] we2[1] we2[2] we2[3] DP8TBlock_512x32_342A4WE
+Vvss vss 0 0.0
+Cq1[0] q1[0] 0 1e-14
+Cq2[0] q2[0] 0 1e-14
+Cq1[1] q1[1] 0 1e-14
+Cq2[1] q2[1] 0 1e-14
+Cq1[2] q1[2] 0 1e-14
+Cq2[2] q2[2] 0 1e-14
+Cq1[3] q1[3] 0 1e-14
+Cq2[3] q2[3] 0 1e-14
+Cq1[4] q1[4] 0 1e-14
+Cq2[4] q2[4] 0 1e-14
+Cq1[5] q1[5] 0 1e-14
+Cq2[5] q2[5] 0 1e-14
+Cq1[6] q1[6] 0 1e-14
+Cq2[6] q2[6] 0 1e-14
+Cq1[7] q1[7] 0 1e-14
+Cq2[7] q2[7] 0 1e-14
+Cq1[8] q1[8] 0 1e-14
+Cq2[8] q2[8] 0 1e-14
+Cq1[9] q1[9] 0 1e-14
+Cq2[9] q2[9] 0 1e-14
+Cq1[10] q1[10] 0 1e-14
+Cq2[10] q2[10] 0 1e-14
+Cq1[11] q1[11] 0 1e-14
+Cq2[11] q2[11] 0 1e-14
+Cq1[12] q1[12] 0 1e-14
+Cq2[12] q2[12] 0 1e-14
+Cq1[13] q1[13] 0 1e-14
+Cq2[13] q2[13] 0 1e-14
+Cq1[14] q1[14] 0 1e-14
+Cq2[14] q2[14] 0 1e-14
+Cq1[15] q1[15] 0 1e-14
+Cq2[15] q2[15] 0 1e-14
+Cq1[16] q1[16] 0 1e-14
+Cq2[16] q2[16] 0 1e-14
+Cq1[17] q1[17] 0 1e-14
+Cq2[17] q2[17] 0 1e-14
+Cq1[18] q1[18] 0 1e-14
+Cq2[18] q2[18] 0 1e-14
+Cq1[19] q1[19] 0 1e-14
+Cq2[19] q2[19] 0 1e-14
+Cq1[20] q1[20] 0 1e-14
+Cq2[20] q2[20] 0 1e-14
+Cq1[21] q1[21] 0 1e-14
+Cq2[21] q2[21] 0 1e-14
+Cq1[22] q1[22] 0 1e-14
+Cq2[22] q2[22] 0 1e-14
+Cq1[23] q1[23] 0 1e-14
+Cq2[23] q2[23] 0 1e-14
+Cq1[24] q1[24] 0 1e-14
+Cq2[24] q2[24] 0 1e-14
+Cq1[25] q1[25] 0 1e-14
+Cq2[25] q2[25] 0 1e-14
+Cq1[26] q1[26] 0 1e-14
+Cq2[26] q2[26] 0 1e-14
+Cq1[27] q1[27] 0 1e-14
+Cq2[27] q2[27] 0 1e-14
+Cq1[28] q1[28] 0 1e-14
+Cq2[28] q2[28] 0 1e-14
+Cq1[29] q1[29] 0 1e-14
+Cq2[29] q2[29] 0 1e-14
+Cq1[30] q1[30] 0 1e-14
+Cq2[30] q2[30] 0 1e-14
+Cq1[31] q1[31] 0 1e-14
+Cq2[31] q2[31] 0 1e-14
+Vvdd vdd_i 0 1.3
+Rvdd vdd_i vdd 0.1
+Vclk1 clk1_i 0 PWL(0.0s 0.0V 1e-08s 0.0V 1.02e-08s 1.3V 1.5000000000000002e-08s 1.3V 1.52e-08s 0.0V 2e-08s 0.0V 2.02e-08s 1.3V 2.5e-08s 1.3V 2.5199999999999997e-08s 0.0V)
+Rclk1 clk1_i clk1 0.1
+Vclk2 clk2_i 0 PWL(0.0s 0.0V 1e-08s 0.0V 1.02e-08s 1.3V 1.5000000000000002e-08s 1.3V 1.52e-08s 0.0V 2e-08s 0.0V 2.02e-08s 1.3V 2.5e-08s 1.3V 2.5199999999999997e-08s 0.0V)
+Rclk2 clk2_i clk2 0.1
+Va1[0] a1[0]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[0] a1[0]_i a1[0] 0.1
+Va1[1] a1[1]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[1] a1[1]_i a1[1] 0.1
+Va1[2] a1[2]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[2] a1[2]_i a1[2] 0.1
+Va1[3] a1[3]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[3] a1[3]_i a1[3] 0.1
+Va1[4] a1[4]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[4] a1[4]_i a1[4] 0.1
+Va1[5] a1[5]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[5] a1[5]_i a1[5] 0.1
+Va1[6] a1[6]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[6] a1[6]_i a1[6] 0.1
+Va1[7] a1[7]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[7] a1[7]_i a1[7] 0.1
+Va1[8] a1[8]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra1[8] a1[8]_i a1[8] 0.1
+Va2[0] a2[0]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra2[0] a2[0]_i a2[0] 0.1
+Va2[1] a2[1]_i 0 PWL(0.0s 0.0V 1.75e-08s 0.0V 1.77e-08s 1.3V)
+Ra2[1] a2[1]_i a2[1] 0.1
+Va2[2] a2[2]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Ra2[2] a2[2]_i a2[2] 0.1
+Va2[3] a2[3]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Ra2[3] a2[3]_i a2[3] 0.1
+Va2[4] a2[4]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Ra2[4] a2[4]_i a2[4] 0.1
+Va2[5] a2[5]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Ra2[5] a2[5]_i a2[5] 0.1
+Va2[6] a2[6]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Ra2[6] a2[6]_i a2[6] 0.1
+Va2[7] a2[7]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Ra2[7] a2[7]_i a2[7] 0.1
+Va2[8] a2[8]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Ra2[8] a2[8]_i a2[8] 0.1
+Vd1[0] d1[0]_i 0 1.3
+Rd1[0] d1[0]_i d1[0] 0.1
+Vd1[1] d1[1]_i 0 1.3
+Rd1[1] d1[1]_i d1[1] 0.1
+Vd1[2] d1[2]_i 0 1.3
+Rd1[2] d1[2]_i d1[2] 0.1
+Vd1[3] d1[3]_i 0 1.3
+Rd1[3] d1[3]_i d1[3] 0.1
+Vd1[4] d1[4]_i 0 1.3
+Rd1[4] d1[4]_i d1[4] 0.1
+Vd1[5] d1[5]_i 0 1.3
+Rd1[5] d1[5]_i d1[5] 0.1
+Vd1[6] d1[6]_i 0 1.3
+Rd1[6] d1[6]_i d1[6] 0.1
+Vd1[7] d1[7]_i 0 1.3
+Rd1[7] d1[7]_i d1[7] 0.1
+Vd1[8] d1[8]_i 0 1.3
+Rd1[8] d1[8]_i d1[8] 0.1
+Vd1[9] d1[9]_i 0 1.3
+Rd1[9] d1[9]_i d1[9] 0.1
+Vd1[10] d1[10]_i 0 1.3
+Rd1[10] d1[10]_i d1[10] 0.1
+Vd1[11] d1[11]_i 0 1.3
+Rd1[11] d1[11]_i d1[11] 0.1
+Vd1[12] d1[12]_i 0 1.3
+Rd1[12] d1[12]_i d1[12] 0.1
+Vd1[13] d1[13]_i 0 1.3
+Rd1[13] d1[13]_i d1[13] 0.1
+Vd1[14] d1[14]_i 0 1.3
+Rd1[14] d1[14]_i d1[14] 0.1
+Vd1[15] d1[15]_i 0 1.3
+Rd1[15] d1[15]_i d1[15] 0.1
+Vd1[16] d1[16]_i 0 1.3
+Rd1[16] d1[16]_i d1[16] 0.1
+Vd1[17] d1[17]_i 0 1.3
+Rd1[17] d1[17]_i d1[17] 0.1
+Vd1[18] d1[18]_i 0 1.3
+Rd1[18] d1[18]_i d1[18] 0.1
+Vd1[19] d1[19]_i 0 1.3
+Rd1[19] d1[19]_i d1[19] 0.1
+Vd1[20] d1[20]_i 0 1.3
+Rd1[20] d1[20]_i d1[20] 0.1
+Vd1[21] d1[21]_i 0 1.3
+Rd1[21] d1[21]_i d1[21] 0.1
+Vd1[22] d1[22]_i 0 1.3
+Rd1[22] d1[22]_i d1[22] 0.1
+Vd1[23] d1[23]_i 0 1.3
+Rd1[23] d1[23]_i d1[23] 0.1
+Vd1[24] d1[24]_i 0 1.3
+Rd1[24] d1[24]_i d1[24] 0.1
+Vd1[25] d1[25]_i 0 1.3
+Rd1[25] d1[25]_i d1[25] 0.1
+Vd1[26] d1[26]_i 0 1.3
+Rd1[26] d1[26]_i d1[26] 0.1
+Vd1[27] d1[27]_i 0 1.3
+Rd1[27] d1[27]_i d1[27] 0.1
+Vd1[28] d1[28]_i 0 1.3
+Rd1[28] d1[28]_i d1[28] 0.1
+Vd1[29] d1[29]_i 0 1.3
+Rd1[29] d1[29]_i d1[29] 0.1
+Vd1[30] d1[30]_i 0 1.3
+Rd1[30] d1[30]_i d1[30] 0.1
+Vd1[31] d1[31]_i 0 1.3
+Rd1[31] d1[31]_i d1[31] 0.1
+Vd2[0] d2[0]_i 0 0.0
+Rd2[0] d2[0]_i d2[0] 0.1
+Vd2[1] d2[1]_i 0 0.0
+Rd2[1] d2[1]_i d2[1] 0.1
+Vd2[2] d2[2]_i 0 0.0
+Rd2[2] d2[2]_i d2[2] 0.1
+Vd2[3] d2[3]_i 0 0.0
+Rd2[3] d2[3]_i d2[3] 0.1
+Vd2[4] d2[4]_i 0 0.0
+Rd2[4] d2[4]_i d2[4] 0.1
+Vd2[5] d2[5]_i 0 0.0
+Rd2[5] d2[5]_i d2[5] 0.1
+Vd2[6] d2[6]_i 0 0.0
+Rd2[6] d2[6]_i d2[6] 0.1
+Vd2[7] d2[7]_i 0 0.0
+Rd2[7] d2[7]_i d2[7] 0.1
+Vd2[8] d2[8]_i 0 0.0
+Rd2[8] d2[8]_i d2[8] 0.1
+Vd2[9] d2[9]_i 0 0.0
+Rd2[9] d2[9]_i d2[9] 0.1
+Vd2[10] d2[10]_i 0 0.0
+Rd2[10] d2[10]_i d2[10] 0.1
+Vd2[11] d2[11]_i 0 0.0
+Rd2[11] d2[11]_i d2[11] 0.1
+Vd2[12] d2[12]_i 0 0.0
+Rd2[12] d2[12]_i d2[12] 0.1
+Vd2[13] d2[13]_i 0 0.0
+Rd2[13] d2[13]_i d2[13] 0.1
+Vd2[14] d2[14]_i 0 0.0
+Rd2[14] d2[14]_i d2[14] 0.1
+Vd2[15] d2[15]_i 0 0.0
+Rd2[15] d2[15]_i d2[15] 0.1
+Vd2[16] d2[16]_i 0 0.0
+Rd2[16] d2[16]_i d2[16] 0.1
+Vd2[17] d2[17]_i 0 0.0
+Rd2[17] d2[17]_i d2[17] 0.1
+Vd2[18] d2[18]_i 0 0.0
+Rd2[18] d2[18]_i d2[18] 0.1
+Vd2[19] d2[19]_i 0 0.0
+Rd2[19] d2[19]_i d2[19] 0.1
+Vd2[20] d2[20]_i 0 0.0
+Rd2[20] d2[20]_i d2[20] 0.1
+Vd2[21] d2[21]_i 0 0.0
+Rd2[21] d2[21]_i d2[21] 0.1
+Vd2[22] d2[22]_i 0 0.0
+Rd2[22] d2[22]_i d2[22] 0.1
+Vd2[23] d2[23]_i 0 0.0
+Rd2[23] d2[23]_i d2[23] 0.1
+Vd2[24] d2[24]_i 0 0.0
+Rd2[24] d2[24]_i d2[24] 0.1
+Vd2[25] d2[25]_i 0 0.0
+Rd2[25] d2[25]_i d2[25] 0.1
+Vd2[26] d2[26]_i 0 0.0
+Rd2[26] d2[26]_i d2[26] 0.1
+Vd2[27] d2[27]_i 0 0.0
+Rd2[27] d2[27]_i d2[27] 0.1
+Vd2[28] d2[28]_i 0 0.0
+Rd2[28] d2[28]_i d2[28] 0.1
+Vd2[29] d2[29]_i 0 0.0
+Rd2[29] d2[29]_i d2[29] 0.1
+Vd2[30] d2[30]_i 0 0.0
+Rd2[30] d2[30]_i d2[30] 0.1
+Vd2[31] d2[31]_i 0 0.0
+Rd2[31] d2[31]_i d2[31] 0.1
+Vwe1[0] we1[0]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe1[0] we1[0]_i we1[0] 0.1
+Vwe1[1] we1[1]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe1[1] we1[1]_i we1[1] 0.1
+Vwe1[2] we1[2]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe1[2] we1[2]_i we1[2] 0.1
+Vwe1[3] we1[3]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe1[3] we1[3]_i we1[3] 0.1
+Vwe2[0] we2[0]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe2[0] we2[0]_i we2[0] 0.1
+Vwe2[1] we2[1]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe2[1] we2[1]_i we2[1] 0.1
+Vwe2[2] we2[2]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe2[2] we2[2]_i we2[2] 0.1
+Vwe2[3] we2[3]_i 0 PWL(0.0s 1.3V 1.75e-08s 1.3V 1.77e-08s 0.0V)
+Rwe2[3] we2[3]_i we2[3] 0.1
+
+* Node initialization
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph1.xclkwe.xweff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[0].xperiph2.xclkwe.xweff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph1.xclkwe.xweff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[1].xperiph2.xclkwe.xweff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph1.xclkwe.xweff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[2].xperiph2.xclkwe.xweff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph1.xclkwe.xweff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[0].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[1].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[2].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[3].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[4].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[5].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[6].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xrw[7].xd_ff._dff_s)=0.0
+.ic v(xtop.xcolumnblock.xcolumn[3].xperiph2.xclkwe.xweff._dff_s)=0.0
+.save vss vdd
+.save clk1 clk2
+.save "a1[0]" "a1[1]" "a1[2]" "a1[3]" "a1[4]" "a1[5]" "a1[6]" "a1[7]" "a1[8]"
+.save "d1[0]" "d1[1]" "d1[2]" "d1[3]" "d1[4]" "d1[5]" "d1[6]" "d1[7]"
+.save "d1[8]" "d1[9]" "d1[10]" "d1[11]" "d1[12]" "d1[13]" "d1[14]" "d1[15]"
+.save "d1[16]" "d1[17]" "d1[18]" "d1[19]" "d1[20]" "d1[21]" "d1[22]" "d1[23]"
+.save "d1[24]" "d1[25]" "d1[26]" "d1[27]" "d1[28]" "d1[29]" "d1[30]" "d1[31]"
+.save "q1[0]" "q1[1]" "q1[2]" "q1[3]" "q1[4]" "q1[5]" "q1[6]" "q1[7]"
+.save "q1[8]" "q1[9]" "q1[10]" "q1[11]" "q1[12]" "q1[13]" "q1[14]" "q1[15]"
+.save "q1[16]" "q1[17]" "q1[18]" "q1[19]" "q1[20]" "q1[21]" "q1[22]" "q1[23]"
+.save "q1[24]" "q1[25]" "q1[26]" "q1[27]" "q1[28]" "q1[29]" "q1[30]" "q1[31]"
+.save "we1[0]" "we1[1]" "we1[2]" "we1[3]"
+.save "a2[0]" "a2[1]" "a2[2]" "a2[3]" "a2[4]" "a2[5]" "a2[6]" "a2[7]" "a2[8]"
+.save "d2[0]" "d2[1]" "d2[2]" "d2[3]" "d2[4]" "d2[5]" "d2[6]" "d2[7]"
+.save "d2[8]" "d2[9]" "d2[10]" "d2[11]" "d2[12]" "d2[13]" "d2[14]" "d2[15]"
+.save "d2[16]" "d2[17]" "d2[18]" "d2[19]" "d2[20]" "d2[21]" "d2[22]" "d2[23]"
+.save "d2[24]" "d2[25]" "d2[26]" "d2[27]" "d2[28]" "d2[29]" "d2[30]" "d2[31]"
+.save "q2[0]" "q2[1]" "q2[2]" "q2[3]" "q2[4]" "q2[5]" "q2[6]" "q2[7]"
+.save "q2[8]" "q2[9]" "q2[10]" "q2[11]" "q2[12]" "q2[13]" "q2[14]" "q2[15]"
+.save "q2[16]" "q2[17]" "q2[18]" "q2[19]" "q2[20]" "q2[21]" "q2[22]" "q2[23]"
+.save "q2[24]" "q2[25]" "q2[26]" "q2[27]" "q2[28]" "q2[29]" "q2[30]" "q2[31]"
+.save "we2[0]" "we2[1]" "we2[2]" "we2[3]"
+.save "xtop.mux1[0]" "xtop.mux1[1]"
+.save "xtop.mux1[2]" "xtop.mux1[3]"
+.save xtop.columnclk1 xtop.precharge1_n xtop.we_en1
+.save "xtop.wl1[0]" "xtop.wl1[127]"
+.save "xtop.mux2[0]" "xtop.mux2[1]"
+.save "xtop.mux2[2]" "xtop.mux2[3]"
+.save xtop.columnclk2 xtop.precharge2_n xtop.we_en2
+.save "xtop.wl2[0]" "xtop.wl2[127]"
+.save xtop.xrowperiph1.wl_en
+.save "xtop.xrowperiph1.xrowdec.pd[0][0]"
+.save "xtop.xrowperiph1.xrowdec.pd[0][1]"
+.save "xtop.xrowperiph1.xrowdec.pd[0][2]"
+.save "xtop.xrowperiph1.xrowdec.pd[0][3]"
+.save "xtop.xrowperiph1.xrowdec.pd[0][4]"
+.save "xtop.xrowperiph1.xrowdec.pd[0][5]"
+.save "xtop.xrowperiph1.xrowdec.pd[0][6]"
+.save "xtop.xrowperiph1.xrowdec.pd[0][7]"
+.save "xtop.xrowperiph1.xrowdec.page[0]"
+.save "xtop.xrowperiph1.xrowdec.page[1]"
+.save "xtop.xrowperiph1.xrowdec.page[2]"
+.save "xtop.xrowperiph1.xrowdec.page[3]"
+.save "xtop.xrowperiph1.xrowdec.page[4]"
+.save "xtop.xrowperiph1.xrowdec.page[5]"
+.save "xtop.xrowperiph1.xrowdec.page[6]"
+.save "xtop.xrowperiph1.xrowdec.page[7]"
+.save "xtop.xrowperiph1.xrowdec.page[8]"
+.save "xtop.xrowperiph1.xrowdec.page[9]"
+.save "xtop.xrowperiph1.xrowdec.page[10]"
+.save "xtop.xrowperiph1.xrowdec.page[11]"
+.save "xtop.xrowperiph1.xrowdec.page[12]"
+.save "xtop.xrowperiph1.xrowdec.page[13]"
+.save "xtop.xrowperiph1.xrowdec.page[14]"
+.save "xtop.xrowperiph1.xrowdec.page[15]"
+.save xtop.xrowperiph2.wl_en
+.save "xtop.xrowperiph2.xrowdec.pd[0][0]"
+.save "xtop.xrowperiph2.xrowdec.pd[0][1]"
+.save "xtop.xrowperiph2.xrowdec.pd[0][2]"
+.save "xtop.xrowperiph2.xrowdec.pd[0][3]"
+.save "xtop.xrowperiph2.xrowdec.pd[0][4]"
+.save "xtop.xrowperiph2.xrowdec.pd[0][5]"
+.save "xtop.xrowperiph2.xrowdec.pd[0][6]"
+.save "xtop.xrowperiph2.xrowdec.pd[0][7]"
+.save "xtop.xrowperiph2.xrowdec.page[0]"
+.save "xtop.xrowperiph2.xrowdec.page[1]"
+.save "xtop.xrowperiph2.xrowdec.page[2]"
+.save "xtop.xrowperiph2.xrowdec.page[3]"
+.save "xtop.xrowperiph2.xrowdec.page[4]"
+.save "xtop.xrowperiph2.xrowdec.page[5]"
+.save "xtop.xrowperiph2.xrowdec.page[6]"
+.save "xtop.xrowperiph2.xrowdec.page[7]"
+.save "xtop.xrowperiph2.xrowdec.page[8]"
+.save "xtop.xrowperiph2.xrowdec.page[9]"
+.save "xtop.xrowperiph2.xrowdec.page[10]"
+.save "xtop.xrowperiph2.xrowdec.page[11]"
+.save "xtop.xrowperiph2.xrowdec.page[12]"
+.save "xtop.xrowperiph2.xrowdec.page[13]"
+.save "xtop.xrowperiph2.xrowdec.page[14]"
+.save "xtop.xrowperiph2.xrowdec.page[15]"
+.save "xtop.xcolumnblock.xcolumn[0].bl1[0]" "xtop.xcolumnblock.xcolumn[0].bl1_n[0]"
+.save "xtop.xcolumnblock.xcolumn[0].bl1[3]" "xtop.xcolumnblock.xcolumn[0].bl1_n[3]"
+.save "xtop.xcolumnblock.xcolumn[0].bl2[0]" "xtop.xcolumnblock.xcolumn[0].bl2_n[0]"
+.save "xtop.xcolumnblock.xcolumn[0].bl2[3]" "xtop.xcolumnblock.xcolumn[0].bl2_n[3]"
+.save "xtop.xcolumnblock.xcolumn[0].xperiph1.muxbl[0]"
+.save "xtop.xcolumnblock.xcolumn[0].xperiph1.muxbl_n[0]"
+.save "xtop.xcolumnblock.xcolumn[0].xperiph2.muxbl[0]"
+.save "xtop.xcolumnblock.xcolumn[0].xperiph2.muxbl_n[0]"
+.save "xtop.xcolumnblock.xcolumn[3].bl1[28]" "xtop.xcolumnblock.xcolumn[3].bl1_n[28]"
+.save "xtop.xcolumnblock.xcolumn[3].bl1[31]" "xtop.xcolumnblock.xcolumn[3].bl1_n[31]"
+.save "xtop.xcolumnblock.xcolumn[3].bl2[28]" "xtop.xcolumnblock.xcolumn[3].bl2_n[28]"
+.save "xtop.xcolumnblock.xcolumn[3].bl2[31]" "xtop.xcolumnblock.xcolumn[3].bl2_n[31]"
+.save "xtop.xcolumnblock.xcolumn[3].xperiph1.muxbl[7]"
+.save "xtop.xcolumnblock.xcolumn[3].xperiph1.muxbl_n[7]"
+.save "xtop.xcolumnblock.xcolumn[3].xperiph2.muxbl[7]"
+.save "xtop.xcolumnblock.xcolumn[3].xperiph2.muxbl_n[7]"
+.options klu method=gear
+* take signal rise times as timestep
+* don't save signals at start when they are settling after uic
+* take quarter of clock period as max time step
+.tran 2e-10 3e-08 1e-09 2.5e-09 uic
+.end
