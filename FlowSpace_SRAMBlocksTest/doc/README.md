@@ -19,7 +19,7 @@ Each of the blocks is put on the testchip twice. One time connected to a padring
 
 The single port has `a` input for the address and `d` input for the value to write to an address during a write operation. In these block one `we` signal is available for each 8 bits which allows to determine on byte if the value is read or written. The block has a `q` output that gets the read value for a read operation. The SRAM is write through which means that for a write operation `q` will get the value of the `d`. The SRAM block is clocked with `clk` signal and it starts an operation on the rising edge of `clk`. `a`, `d` and `we` are latched into internal registers also on the rising edge of `clk`.
 
-The dual port RAM contains to asynchronous ports that both can do read and write. It has does the double set of signals: `a1`/`d1`/`we1`/`q1`/`clk1` for port and `a2`/`d2`/`we2`/`q2`/`clk2` for port 2.
+The dual port RAM was designed to contain two asynchronous ports that both can do read and write. It has does the double set of signals: `a1`/`d1`/`we1`/`q1`/`clk1` for port and `a2`/`d2`/`we2`/`q2`/`clk2` for port 2. After this test block was taped more in-depth verification design was performed and deviations were found resulting in needing to run the two ports synchronously and some intermingling of the address input. In the verification section more details are given on the history of this deviation.
 
 ## Test periphery
 
@@ -89,7 +89,7 @@ For the dual port SRAM the test periphery is put on the chip for each port and a
 
 ### SRAM test block shift register signals
 
-In [SR_Signals.ods](SR_Signals.ods) the signal order in each shift register for each SRAM block can be found.
+In [SR_Signals.ods](SR_Signals.ods) the signal order in each shift register for each SRAM block can be found. The impact of the design deviations found on the dual port RAM are indicated with intended signal in red color and struckthrough followed by the actual signal. See verification section for more information on the change of the signals.
 
 ### Pad ring signals
 
@@ -98,6 +98,8 @@ In order to facilitate the packaging of the test chip a pad frame is used with t
 ![Pin numbers](BlocksTestchip_Top_PinNr.png)
 
 For the pin numbering we take 1 for the bottom bond pad on the left side of the pad ring and then number the pins clock-wise. In [PadRing_PinOut.ods](PadRing_PinOut.ods) you can then find the signals corresponding with each bond pad and the internal connection to the SRAM block.
+
+As the ports of the dual port block can't be run asynchronously the input pins `dp8t1_clk1` and `dp8t1_clk2` have been changed to `dp8t1_clk` signal and both signals have to be driven by the same external signal. This assumes on-chip delay of both signals is the same.
 
 **TODO: pin numbers need to be updated when package is selected for packaging**
 
@@ -112,6 +114,8 @@ This is the pin out for the dual port SRAM:
 ![DP01_PinOut](DP01_PinOut.png)
 
 In order to fit all signals in the 20 pad frame three signals have been shared between port 1 and 2. `in_srin` is connected to `in_srin1` and `in_srin2`; `out_srin` to `out_srin1` and `out_srin2` and `out_l2s` to `out_l2s1` and `out_l2s2`. The pin out has been designed such that test procedures for testing the single port SRAM can be reused on port 1 of the dual port SRAM if `clk2`, `in_shift2`, `in_latch2`, `out_shift2` and `out_latch2` are kept low and `in_srout2` and `out_srout2` are left floating.
+
+As said in the contents section, for the dual port block on this design, port 1 and port 2 can't be used asynchronously so clk1 and clk2 signal have to be driven by the same signal. This assumes on-chip delay for the two signals are the same.
 
 ## Measurement procedures
 
@@ -165,3 +169,19 @@ This can be done by just powering the block and measure the current on it's dedi
 ### Dynamic power consumption
 
 This can be done by shifting the a read or write operation into the input shift register and then perform constant `clk` toggling at a certain frequency and measure the current on the SRAM dedicated supply. Each clock cycle the bitlines will be pre-charged and one of them will be unloaded; also one word line will always be loaded and unloaded. As this procedure will always read or write the same value from or to the same address this procedure will not include the decoder switching power or the sense amplifier switching power. This power is assumed to be small compared to the power consumed on the word lines and especially the bit lines.
+
+## (Post tape-out) verification
+
+The SRAM layout uses overlapping source/drain regions in between cells. At the time of tape-out this was not supported by the upstream LVS check. Therefor a semi-manual LVS check was done on the design before tape-out. After tape-out then a problem was found in the design: two signals that were supposed to be connected by abutment were not as the cells had been moved away from each other to fix a DRC error. This problem present in the column periphery cell that was used in all the four SRAM blocks so nothing would work due to this error.
+
+A M2 fix has been submitted to fix this problem and in parallel an adaptation of the upstream LVS has been developed in order to be able to do LVS on the SRAM blocks with overlapping source/drain regions. Using this adapted check two other problems were identified on the dual port SRAM block:
+
+1. Connection of row decoder of port1 to word lines of port 2 and vice versa.
+
+    At the outside this can be seen as mixing of signals of port1 and port2 in the test shift register and that `clk1` and `clk2` need to be handled as one `clk` signal.
+
+1. Column demultiplexing signals of second port were connect in opposite order.
+
+   This can be seen on the test structures as the last two address bits being inverted for port2.
+
+These two problems would need multi-mask fixes to correct and only affect the dual port SRAM block. When not fixed the test structures would still be usable to measure timing characteristic of this dual port block so it was decided to not go for a mask fix but to just document the deviation of the test structure from the originally wanted one.

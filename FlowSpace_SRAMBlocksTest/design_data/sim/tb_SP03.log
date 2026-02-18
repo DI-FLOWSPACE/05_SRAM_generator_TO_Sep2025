@@ -1,0 +1,32 @@
+
+Note: No compatibility mode selected!
+
+
+Circuit: Top block test simulation
+
+binary raw file "tb_SP03.raw"
+Doing analysis at TEMP = 27.000000 and TNOM = 27.000000
+
+Using KLU as Direct Linear Solver
+No. of Data Columns : 119  
+Operating point simulation skipped by 'uic',
+  now using transient initial conditions.
+ Reference value :  5.27493e-10 Reference value :  5.81342e-10 Reference value :  6.55839e-10 Reference value :  7.26009e-10 Reference value :  8.66350e-10 Reference value :  9.98556e-10 Reference value :  1.26297e-09 Reference value :  1.79179e-09 Reference value :  2.71403e-09 Reference value :  3.96403e-09 Reference value :  5.00000e-09 Reference value :  5.02000e-09 Reference value :  5.06000e-09 Reference value :  5.11233e-09 Reference value :  5.19207e-09 Reference value :  5.20000e-09 Reference value :  5.20718e-09 Reference value :  5.22155e-09 Reference value :  5.24653e-09 Reference value :  5.26776e-09 Reference value :  5.29129e-09 Reference value :  5.31504e-09 Reference value :  5.34082e-09 Reference value :  5.36902e-09 Reference value :  5.39919e-09 Reference value :  5.43014e-09 Reference value :  5.46533e-09 Reference value :  5.50248e-09 Reference value :  5.54196e-09 Reference value :  5.57423e-09 Reference value :  5.60858e-09 Reference value :  5.64246e-09 Reference value :  5.67899e-09 Reference value :  5.72101e-09 Reference value :  5.75994e-09 Reference value :  5.81611e-09 Reference value :  5.87967e-09 Reference value :  5.94924e-09 Reference value :  6.02871e-09 Reference value :  6.09762e-09 Reference value :  6.16054e-09 Reference value :  6.22582e-09 Reference value :  6.30526e-09 Reference value :  6.40568e-09 Reference value :  6.49989e-09 Reference value :  6.60627e-09 Reference value :  6.73912e-09 Reference value :  7.00484e-09 Reference value :  7.32240e-09 Reference value :  7.50000e-09 Reference value :  7.52000e-09 Reference value :  7.56000e-09 Reference value :  7.64000e-09 Reference value :  7.70000e-09 Reference value :  7.70724e-09 Reference value :  7.72171e-09 Reference value :  7.74316e-09 Reference value :  7.76608e-09 Reference value :  7.78949e-09 Reference value :  7.81457e-09 Reference value :  7.84769e-09 Reference value :  7.87823e-09 Reference value :  7.91530e-09 Reference value :  7.95419e-09 Reference value :  7.98892e-09 Reference value :  8.02545e-09 Reference value :  8.06637e-09 Reference value :  8.09930e-09 Reference value :  8.13460e-09 Reference value :  8.16994e-09 Reference value :  8.20753e-09 Reference value :  8.26053e-09 Reference value :  8.31869e-09 Reference value :  8.42293e-09 Reference value :  8.60053e-09 Reference value :  8.75000e-09 Reference value :  8.76911e-09 Reference value :  8.80734e-09 Reference value :  8.87132e-09 Reference value :  8.94906e-09 Reference value :  8.95000e-09 Reference value :  8.95187e-09 Reference value :  8.95562e-09 Reference value :  8.96312e-09 Reference value :  8.97812e-09 Reference value :  9.00812e-09 Reference value :  9.03601e-09 Reference value :  9.06674e-09 Reference value :  9.10858e-09 Reference value :  9.15631e-09 Reference value :  9.25177e-09 Reference value :  9.44270e-09 Reference value :  9.82455e-09 Reference value :  1.00000e-08 Reference value :  1.00200e-08 Reference value :  1.00600e-08 Reference value :  1.01123e-08 Reference value :  1.01921e-08 Reference value :  1.02000e-08 Reference value :  1.02072e-08 Reference value :  1.02215e-08 Reference value :  1.02465e-08 Reference value :  1.02678e-08 Reference value :  1.02913e-08 Reference value :  1.03150e-08 Reference value :  1.03408e-08 Reference value :  1.03690e-08 Reference value :  1.03992e-08 Reference value :  1.04301e-08 Reference value :  1.04624e-08 Reference value :  1.04862e-08 Reference value :  1.05024e-08 Reference value :  1.05186e-08 Reference value :  1.05321e-08 Reference value :  1.05450e-08 Reference value :  1.05590e-08 Reference value :  1.05763e-08 Reference value :  1.05925e-08 Reference value :  1.06142e-08 Reference value :  1.06370e-08 Reference value :  1.06661e-08 Reference value :  1.07005e-08 Reference value :  1.07350e-08 Reference value :  1.07824e-08 Reference value :  1.08336e-08 Reference value :  1.08965e-08 Reference value :  1.09685e-08 Reference value :  1.10390e-08 Reference value :  1.11164e-08 Reference value :  1.11905e-08 Reference value :  1.12674e-08 Reference value :  1.13887e-08 Reference value :  1.15194e-08 Reference value :  1.17099e-08 Reference value :  1.19896e-08 Reference value :  1.23277e-08 Reference value :  1.25000e-08 Reference value :  1.25200e-08 Reference value :  1.25600e-08 Reference value :  1.26400e-08 Reference value :  1.27000e-08 Reference value :  1.27072e-08 Reference value :  1.27217e-08 Reference value :  1.27432e-08 Reference value :  1.27661e-08 Reference value :  1.27895e-08 Reference value :  1.28146e-08 Reference value :  1.28477e-08 Reference value :  1.28789e-08 Reference value :  1.29166e-08 Reference value :  1.29560e-08 Reference value :  1.29902e-08 Reference value :  1.30263e-08 Reference value :  1.30678e-08 Reference value :  1.31009e-08 Reference value :  1.31365e-08 Reference value :  1.31725e-08 Reference value :  1.32106e-08 Reference value :  1.32653e-08 Reference value :  1.33239e-08 Reference value :  1.34362e-08 Reference value :  1.36027e-08 Reference value :  1.37890e-08 Reference value :  1.39864e-08 Reference value :  1.41788e-08 Reference value :  1.44677e-08 Reference value :  1.47787e-08 Reference value :  1.50000e-08
+No. of Data Rows : 168
+
+Total analysis time (seconds) = 799.123
+
+Total elapsed time (seconds) = 909.026 
+
+Total DRAM available = 30966.465 MB.
+DRAM currently available = 3354.750 MB.
+Maximum ngspice program size = 12632.445 MB.
+Current ngspice program size = 11452.848 MB.
+
+Shared ngspice pages =   11.887 MB.
+Text (code) pages =    5.863 MB.
+Stack = 0 bytes.
+Library pages = 12160.535 MB.
+
+1516.11user 14.02system 15:09.83elapsed 168%CPU (0avgtext+0avgdata 11728136maxresident)k
+10288inputs+10752outputs (123major+3697137minor)pagefaults 0swaps
