@@ -7,7 +7,7 @@ The September run is out of the fab, so you can now ask for samples.
 1. Sign the Hiring Agreement: [samples.rtf](drc/samples.rtf)
 2. Send the signed file by email to:
    - **herman(at)ihp-microelectronics.com**
-   - **kehder(at)ihp-microelectronics.com**
+   - **nkehder(at)ihp-microelectronics.com**
 
 ### Required data in your email
 
