@@ -1,115 +1,43 @@
-# TO_Sep2025
+The september run is out of the fab so you can ask for the samples.
+In order to do so you have to:
+Sign the Hiring Agreement
+`drc/samples.rtf`
+and send it to:
+email: herman(at)ihp-microelectronics.com
+email: kehder(at)ihp-microelectronics.com
 
-This repository is dedicated to the submission of open-source designs based on the IHP 130nm BiCMOS Open Source PDK, specifically for the September 2025 edition of the IHP OpenMPW program. In the future, this repository will be integrated as a submodule within the `IHP-Open-DesignLib` repository.
+In the email we need you to specify also the full contact data including
+Name Last Name
+Address
+phone number
+email
 
-ReadTheDocs documentation for IHP-Open-DesignLib is [here](https://ihp-open-ip.readthedocs.io/en/latest/)
+By default we send 10 bare dies.
+If you need packaged chip we can offer QFN or open QFN with pin numbers from
+24 to 64. In order to do bonding we need a bonding plan.
+An example bonding plan for a 64 QFN is here: `drc/QFN64.svg`
 
-> [!IMPORTANT]  
-> Submission registration is **1-st Sep 2025**.
-> Submission deadline is **14-th September 2025** - final DRC clean GDS, no changes accepted after this date. 
+Feel free to use this file and also copy and pase the image of your
+layout in the center marking pin number 1.
 
-> [!IMPORTANT]  
-> Please read carefully the `ExampleDesign/README.md` and fill metadata.json.
-
-## Physical design constraint
-
-1. Please align with the layout design rules which can be found [here](https://github.com/IHP-GmbH/IHP-Open-PDK/blob/main/ihp-sg13g2/libs.doc/doc/SG13G2_os_layout_rules.pdf)
-2. The area granted to a community member is 2 mm^2 It includes the sealring.
-3. The sealring can be found among KLayout PyCells.
-
-## Submission process
-
-To submit for our OpenMPW run you have to have a valid github account. 
-Make a fork of this repository and then create a separate directory for your design next to the `ExampleDesign` (you can also make a copy and rename it). 
-Structure your data according to our recommendations, update the documentation and push your files to your fork, then make a pull request.
-
-> [!CAUTION]  
-> On each PR a github action will be triggered to run a minimal DRC precheck (rejection test). Please consider it and do not upload many `gds` files.
-
-Once you make a PR a github action will run a minimum set of DRC checks on each `gds` and `gds.zip` file. 
-If the test passes it means that your design is manufacturable at our pilot line not ensuring the reliability. 
-An example of a failure is shown on the following figure 
-
-![drc fail](drc/failure.png)
-
-The detailed report can be downloaded from a link, which can be found at the end of the section `Details->Archive DRC Results` as show on the image:
-
-
-![drc report](drc/report.png)
-
-
-> [!TIP]  
-> To be sure that the design meets the minimum DRC requirements we strongly recommend to run it using klayout DRC as shown below:
->![drc klayout](drc/klayout_mindrc.png)
-
-
-> [!TIP]  
-> The DRC rejection test supports `gds` and `gds.zip` files. In a case of a large file (> 50 MB) you can split the `zip` file and upload multiple `zip` files. On linux you can perform it using the following command:
-
-```
-zip -s 50m -r file.gds.zip output_folder/
-```
-
-## Directory structure
-
-If you are a designer, we propose the following directory structure, which we and the community would appreciate you using. Please ensure that the design you submit is reproducible, meaning it should include all the information necessary to replicate the design.
-
-
-```text
-📁<design_name>
- ┣ 📁design_data
- ┃ ┗ 📁tool1/format1/step1
- ┃  ┗ data
- ┃ ┗ 📁tool2/format2/setp2
- ┃  ┗ data
- ┣ 📁doc
- ┃ ┣ 📜specification
- ┃ ┣ ...
- ┗ 📁val <- validation/verification >
- ```
-The first segmentation separates the `design data` from a `documentation` and `verification/validation data`.
-
-### Design data directory structure
-
-The `design data` should be structured using tool/format/step specific scheme.   
-
-Here you can find some examples:
-
-Example1
-```
-  📁design_data
-   ┗ 📁xschem
-   ┗ 📁ngspice
-   ┗ 📁klayout
-   ┗ 📁drc
-   ┗ 📁lvs
-   ┗ 📁gds
-```
-Example2
-```
-  📁design_data
-   ┗ 📁verilog
-   ┗ 📁sdc
-   ┗ 📁lef
-   ┗ 📁gds
-   ┗ 📁lib
-   ┗ 📁drc
-   ┗ 📁lvs
-   ┗ 📁reports
-   ┗ 📁log
-   ```
-### Documentation
-
-In the `doc` folder the designer should provide the documentation. The best option would be any markdown language compatible with `sphinx` and thus ReadTheDocs system. It would make it easy to create a central point for documentation in the `IHP-Open-DesignLib` repository. 
-We also provide a basic template for the documentation in the `ExampleDesign/doc` directory. To use it execute the following:
-```
-cd ExampleDesign
-pip install -r requirements.txt
-make docs
-```
-Go to `source` directory to modify the `rst` files.
-
-### Verification/validation data
-
-Since one of the principal goals of the OpenMPW runs is a creation of a silicon proven designs we expect from the designers to measure and validate the submitted design and then open source measurements results.
-This directory at the moment of the submission is only a placeholder for future measurements data. A report from the measurements can be part of the documentation. 
+| Design name | Short one line description | Location directory |
+| --- | --- | --- |
+| ASICONE Aug 2025 (`asicone_202508`) | Mixed-signal ASIC with a self-generated 5-bit SAR ADC, feed-forward ring oscillators, and an SPI core using custom digital cells. | `asicone_202509/` |
+| Cavaboris (`FMD_QNC_Cavaboris`) | Early-stage Caliptra-compatible Root-of-Trust design developed by HEP-Alliance within DI-SIGN-HEP. | `Cavaboris/` |
+| CSA | CSA submission with metadata and layout artifacts present, but detailed public design documentation is still mostly template-level. | `CSA/` |
+| FLDO (`FMD_QNC_FLDO`) | 4-bit programmable LDO intended for use in a ReRAM-forming circuit. | `FLDO/` |
+| SRAMBlocksTest (`sramblocks_testchip`) | Test chip with multiple SRAM macros and shift-register-based test periphery to validate functionality and timing. | `FlowSpace_SRAMBlocksTest/` |
+| FORTALESA (`fortalesa_chip`) | Fault-Tolerant Reconfigurable Systolic Array targeting DNN inference workloads. | `FORTALESA/` |
+| GbcUsb (`FMD_QNC_GbcUsb`) | CPU-less, flexible, and pluggable USB core aimed at making USB integration easier in open-source hardware. | `GbcUsb/` |
+| Greyhound v2 | Second revision of a RISC-V SoC with tightly coupled eFPGA, expanded FPGA resources, and hierarchical implementation. | `Greyhound/` |
+| Lumos (`FMD_QNC_Lumos`) | Lumos submission referencing an external project repository for detailed implementation information. | `Lumos/` |
+| MissMatch (`FMD_QNC_MissMatch`) | MissMatch submission with design deliverables available, but with minimal descriptive documentation in-repo. The chip targets LV nmos devices mismatch characterization using multiplexed approach | `MissMatch/` |
+| OpenTestChip (`FMD_QNC_OpenTestChip`) | Open test chip containing 37 DC/CV/RF measurement-oriented test structures across a long narrow die. | `OpenTestChip/` |
+| DI-OCDCpro PoC (`FMD_QNC_ocdcpro_poc`) | Proof-of-concept design for the OCDCpro student chip competition initiative. | `ocdcpro_poc/` |
+| picosoc_ac_controller | PicoSoC AC controller submission with implementation artifacts provided and limited high-level documentation. | `picosoc_ac_controller/` |
+| PSoC SoC (`psoc-soc`) | KIT System-on-Chip Lab RISC-V SoC ported to IHP SG13G2 for tapeout from a tagged reproducible revision. | `psoc-soc/` |
+| openTETRISC (`tetrisc_top`) | Adaptive fault-tolerant quad-core RISC-V SoC based on Pulpissimo, including HiRel control and additional SRAM. | `TETRISC/` |
+| Tiny Tapeout IHP 25b (`TTIHP25b`) | Tiny Tapeout IHP 25b multi-project integration submission linked to the TinyTapeout project repository. | `TTIHP25b/` |
+| TRNG Eval (`FMD_QNC_TrngEval`) | HEP-Alliance test structures to evaluate ring-oscillator-based true random number generator implementations. | `TrngEval/` |
+| Trident ESD test structures | ESD and leakage characterization structures supporting a future ultra-low-current charge-sensing ASIC frontend. | `trident_test_structures/` |
+| UWB Pulse Generator (`FMD_QNC_UWB_Pulse_Generator`) | UWB 5th-derivative Gaussian pulse generator plus high-speed track-and-hold amplifier test design. | `UWBPulseGenerator/` |
