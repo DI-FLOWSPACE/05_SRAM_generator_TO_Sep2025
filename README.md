@@ -4,7 +4,7 @@ The September run is out of the fab, so you can now ask for samples.
 
 ### What you must do
 
-1. Sign the Hiring Agreement: [samples.rtf](drc/samples.rtf)
+1. Sign the Hiring Agreement: [samples.rtf](drc/samples.rtf) (download it)
 2. Send the signed file by email to:
    - **herman(at)ihp-microelectronics.com**
    - **nkehder(at)ihp-microelectronics.com**
@@ -23,7 +23,7 @@ Please include all contact details:
 - By default, we send **10 bare dies**.
 - If you need a packaged chip, we can offer **QFN** or **open QFN** with pin counts from **24 to 64**.
 - For bonding, we need a bonding plan.
-- Example bonding plan for a 64-pin QFN: [QFN64.svg](drc/QFN64.svg)
+- Example bonding plan for a 64-pin QFN: [QFN64.svg](drc/QFN64.svg) (download it)
 
 Feel free to use this file and also copy and paste the image of your layout in the center, marking pin number 1.
 
